@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://in29minutes.com/courses"
+xmlns:tns="http://in29minutes.com/courses" elementFormDefault="qualified">
+	<xs:element name="GetCourseDetailsRequest">
+     
+        <xs:complexType>
+		<xs:sequence>
+			<xs:element name="id" type="integer"></xs:element>
+		</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+	<xs:element name="GetCourseDetailsResponse">
+       
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="CourseDetails" type="tns:CourseDetails"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+     <xs:complexType name="CourseDetails">
+		<xs:sequence>
+			<xs:element name="id" type="integer"></xs:element>
+			<xs:element name="name" type="string"></xs:element>
+			<xs:element name="description" type="string"></xs:element>
+		</xs:sequence>
+	 </xs:complexType>
+</xs:schema>
